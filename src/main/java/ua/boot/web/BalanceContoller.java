@@ -1,6 +1,7 @@
 package ua.boot.web;
 
 import org.springframework.web.bind.annotation.*;
+import ua.boot.web.model.TransferBalance;
 
 import java.math.BigDecimal;
 
@@ -12,15 +13,13 @@ public class BalanceContoller {
 
     }
 
-    @PostMapping("/{accountId}")
-    public BigDecimal addMoney(@PathVariable Long accountId,
-                               @RequestBody BigDecimal amount
-    ) {
+    @PostMapping("/add")
+    public BigDecimal addMoney(@RequestBody TransferBalance amount) {
     }
 
     @PostMapping("/transfer")
-    public BigDecimal transfer(@PathVariable Long accountId,
-                               @RequestBody BigDecimal amount
-    ) {
+    public BigDecimal transfer(@RequestBody TransferBalance transferBalance) {
     }
+
+
 }
